@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My To-Do List</title>
+  </head>
+  <body class="center-screen">
+    <!-- Tela de login -->
+
+    <div id="login-container" class="center-screen display-none">
+      <div id="logo" class="flex justify-center">
+        <h1 id="logo-text" class="color-white">My TO-DO List</h1>
+      </div>
+      <div id="login-form" class="center-screen">
+        <input placeholder="E-mail" class="input border-radius" id="login-email" type="email" name="" >
+        <input placeholder="Senha" class="input border-radius" id="login-password" type="password" name="" >
+        <button class="btn border-radius bg-pink color-white" id="login-button">Login</button>
+        <a id="toggle" class="color-white" href="#">Cadastre-se</a>
+      </div>
+    </div>
+
+    <!-- /Tela de login -->
+
+    <!-- To-do list -->
+    <div id="main-container" class="display-none">
+      <div id="task-grid" class="display-grid">
+        <div id="header" class="flex align-center">
+          <div class="container-content flex align-center">
+            <h2 class="color-white">Olá <span id="user" class="color-white">Usuário</span></h2>
+            <button id="sair" class="bg-pink color-white">Sair</button>
+          </div>
+        </div>
+        <div id="task-container">      
+         
+        </div>
+        <div id="footer" class="flex align-center bg-white">
+          <div class="container-content">
+            <input type="text" id="write-task" placeholder="Digite sua tarefa">
+            <button class="bg-pink" id="add-task"><img  src="./assets/icons8-mais.svg" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- To-do list -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+    
+    <script src="./logic/firebase.js"></script>
+    <script src="./logic/app.js"></script>
+    <script src="./logic/auth.js"></script>
+    <script src="./logic/to-do.js"></script>
+
+  </body>
+</html>

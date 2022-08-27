@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+:root {
+    --bg: #073B4C;
+    --white: rgb(255, 255, 255);
+    --pink: #EF476F;
+    --grey: rgb(44, 44, 44);
+    --container: 60vw;
+}
+
+/* Padrões */
+
+.color-white {
+    color: var(--white);
+}
+
+.color-grey {
+    color: var(--grey);
+}
+
+.color-pink {
+    color: var(--pink)
+}
+
+.bg {
+    background-color: var(--bg);
+}
+
+.bg-pink {
+    background-color: var(--pink);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.display-none {
+    display: none !important;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-grid {
+    display: grid !important;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.center-screen {
+    display: grid;
+    place-items: center;
+}
+
+.input {
+    background-color: var(--white);
+    border: solid 1px grey;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.btn {
+    height: 80px;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+}
+
+.border-radius {
+    border-radius: 5px;
+}
+
+
+/* /Padrões */
+
+/* Elementos */
+
+body {
+    background-color: var(--bg);
+    height: 100vh;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* /Elementos */
+
+/* Classes e ID's */
+
+/* Login */
+
+#login-container {
+    width: 40vw;
+}
+
+#logo {
+    width: 100%;
+}
+
+#logo-text {
+    font-size: 4rem;
+    font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+}
+
+#login-form {
+    margin-top: 100px;
+    width: 70%;
+}
+
+#login-button {
+    font-size: 1.1rem;
+}
+
+#toggle {
+    padding: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* /Login */
+
+/* Tarefas */
+
+.container-content {
+    width: var(--container);
+    margin: 0 auto;
+    justify-content: end;
+}
+
+.container-content h2 span {
+    font-weight: 200;
+}
+
+#sair {
+    margin-left: 25px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+}
+
+#main-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#task-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 4fr 150px;
+    
+}
+
+#task-container {
+    width: var(--container);
+    margin: 0 auto;
+    overflow-y: scroll;
+    padding-bottom: 60px;
+}
+
+#task-container::-webkit-scrollbar {
+    display: none;
+}
+
+.task {
+    margin: 10px 0;
+
+}
+
+.task-content-container {
+    width: 100%;
+    height: 100px;
+    /* RELATIVE */
+}
+
+.task-item {
+    overflow: hidden;
+}
+
+#task-content {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.task-delete {
+    width: 80px;
+}
+
+.task-delete img {
+    height: 100%;
+    width: 40%;
+    filter: invert();
+}
+
+#footer {
+    position: relative;
+    text-align: end;
+    box-shadow: 0px 8px 19px -2px #000000;
+}
+
+#write-task {
+    width: 100%;
+    padding: 3% 0;
+    display: block;
+    border: none;
+}
+
+#write-task:focus {
+    outline: none;
+}
+
+#add-task {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    transform: translate(-100%, -50%);
+    border-radius: 50%;
+    border: none;
+    padding: 20px;
+    box-shadow: 0px 8px 19px -2px #0000007c;
+}
+
+#add-task img {
+    width: 100%;
+    filter: invert();
+}
+
+/* /Tarefas */
+
+/* /Classes e ID's */
+
+/* Query Mobile */
+@media screen and (max-width: 900px) {
+
+    #task-grid{
+        height: 100%;
+    }
+    
+    .input {
+        height: 50px;
+    }
+
+    .btn {
+        height: 50px;
+    }
+
+    #login-container {
+        width: 90vw;
+    }
+
+    #logo {
+        width: 50vw;
+    }
+
+    #logo-text {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #login-form{
+        margin-top: 40px;
+    }
+    .container-content {
+        width: 90vw;
+    }
+
+    #main-container {
+        width: 100vw;
+
+    }
+
+    .border-radius {
+        border-radius: 0px;
+    }
+
+    #task-container {
+        width: 100%;
+
+    }
+
+    .task {
+        margin: 10px 0;
+        overflow-x: scroll;
+        margin: 1px 0;
+    }
+
+    .task::-webkit-scrollbar {
+        display: none;
+    }
+
+    .task-item {
+        overflow: hidden;
+        width: calc(100% + 50px)
+    }
+
+}
+
+/* /Query Mobile */
